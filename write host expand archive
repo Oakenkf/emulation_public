@@ -1,0 +1,12 @@
+Write-Host QmVuaWduIFBheWxvYWQgU2ltdWxhdGlvbg==;
+
+if (-not (Test-Path 'how are you.zip' -PathType Leaf)) {
+    Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Oakenkf/emulation_public/main/how%20are%20you.zip' -OutFile 'how are you.zip'
+}
+
+Expand-Archive -Path 'how are you.zip' -DestinationPath 'Extracted' -Force;
+
+$txtFile = Get-ChildItem -Path Extracted -Recurse -Filter *.txt | Select-Object -First 1
+if ($txtFile) {
+    Start-Process notepad.exe -ArgumentList $txtFile.FullName
+}
