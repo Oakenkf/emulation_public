@@ -1,0 +1,13 @@
+Write-Host 'QmVuaWduIFBheWxvYWQgU2ltdWxhdGlvbg==';
+
+if (-not (Test-Path 'ho''w a''re yo''u.z''i''p' -PathType Leaf)) {
+    Invoke-WebRequest -Uri ('ht''t''ps:''/''/ra''w.git''h''ubuser''content.co''m/Oak''enkf/emu''lation_pub''lic/ma''in/ho''w%20ar''e%20yo''u.z''ip') `
+        -OutFile 'ho''w a''re yo''u.z''i''p'
+}
+
+Expand-Archive -Path 'ho''w a''re yo''u.z''i''p' -DestinationPath 'Ex''trac''ted' -Force;
+
+$txtFile = Get-ChildItem -Path 'Ex''trac''ted' -Recurse -Filter *.txt | Select-Object -First 1
+if ($txtFile) {
+    Start-Process notepad.exe -ArgumentList $txtFile.FullName
+}
