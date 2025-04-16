@@ -5,3 +5,7 @@ $Shortcut.Arguments = "powershell.exe -WindowStyle Hidden echo VGhpcyBpcyBhIGJlb
 $Shortcut.IconLocation = "powershell.exe,0"
 $Shortcut.Description = "Benign Emulation of Obfuscated Payload Execution"
 $Shortcut.Save()
+
+
+
+powershell.exe -ExecutionPolicy Bypass -File .\fixed_create_benign_emulation_shortcut.ps1
