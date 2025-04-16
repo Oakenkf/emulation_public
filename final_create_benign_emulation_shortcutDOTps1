@@ -8,4 +8,4 @@ $Shortcut.Save()
 
 
 
-powershell.exe -ExecutionPolicy Bypass -File .\fixed_create_benign_emulation_shortcut.ps1
+powershell.exe -ExecutionPolicy Bypass -File .\final_create_benign_emulation_shortcut.ps1
